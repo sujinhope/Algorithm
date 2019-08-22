@@ -40,11 +40,11 @@ public class Main_14889_스타트와링크 {
 	public static void main(String[] args) throws NumberFormatException, IOException {
 		
 		BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
+		StringTokenizer st;
 		N = Integer.parseInt(bf.readLine());
 		S = new int[N][N];
 		visited = new boolean[N];
 		
-		StringTokenizer st;		
 		for(int i = 0; i<N; i++) {
 			st = new StringTokenizer(bf.readLine());
 			for(int j = 0; j<N; j++) {
