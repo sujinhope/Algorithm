@@ -27,8 +27,7 @@ public class Main_14503_로봇청소기 {
 				clean = true;
 				go(nx, ny, d);//전진 + 회전
 				break;
-			}
-			
+			}			
 		}
 		if(clean == false) { //청소를 못했다면
 			int d = (dir+2)%4; //반대방향
