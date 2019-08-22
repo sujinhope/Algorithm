@@ -46,7 +46,6 @@ public class Main_14888_연산자끼워넣기 { // + - * /
 	}
 
 	public static void main(String[] args) {
-		
 		Scanner sc = new Scanner(System.in);
 		N = sc.nextInt();
 		oper = new ArrayList<>();
