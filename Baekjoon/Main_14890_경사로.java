@@ -11,7 +11,6 @@ import java.util.StringTokenizer;
 class Pair {
 	int x;
 	boolean b;
-	
 	Pair(int x, boolean b){
 		this.x = x;
 		this.b = b;
@@ -50,7 +49,7 @@ public class Main_14890_경사로 {
 		return true;
 	}
 	
-	public static boolean go(List<Pair> list) { //중간에 height 갱신!!!!!!!!!!!!!!!!!
+	public static boolean go(List<Pair> list) { //중간에 height 갱신!
 		int height = list.get(0).x; //한 행/열
 		int cnt = 1;
 		for(int i = 0; i<list.size(); i+=cnt) {
