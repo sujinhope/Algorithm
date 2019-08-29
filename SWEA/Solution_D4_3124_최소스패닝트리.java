@@ -35,7 +35,6 @@ public class Solution_D4_3124_최소스패닝트리 {
 				int c = sc.nextInt();
 
 				edge[i] = new Pair(s, e, c);
-//				union(s, e);
 			}
 			Arrays.sort(edge, new Comparator<Pair>() {
 				public int compare(Pair e1, Pair e2) {
@@ -43,14 +42,14 @@ public class Solution_D4_3124_최소스패닝트리 {
 				}
 			});
 			long ans = 0L;
+//			int count = 0;
 			for (int i = 0; i < E; i++) {
-				int from = find(edge[i].x);
-				int to = find(edge[i].y);
-
-				if (from == to)	continue; //사이클 체크
 				
-				union(from, to);
-				ans += edge[i].w;
+				if(union(edge[i].x, edge[i].y)) { //union이 성공할 경우
+					ans += edge[i].w;
+//					count++; 
+				}
+//				if(count==V-1) break; //있으면 시간단축
 			}
 			System.out.println("#"+t+" "+ans);
 		}
