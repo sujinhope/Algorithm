@@ -2,14 +2,14 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class Main_2468_¾ÈÀü¿µ¿ª {
+public class Main_2468_ì•ˆì „ì˜ì—­ {
 
 	static int N; //2<=N<=100
 	static int max = Integer.MIN_VALUE;
 	static int map[][];
 	static int dr[] = {-1, 1, 0, 0}, dc[] = {0, 0, -1, 1};
 	static boolean visited[][];
-	static boolean checked[] = new boolean[101]; //³ôÀÌÀÇ Á¾·ù(?), 1<=³ôÀÌ<=100
+	static boolean checked[] = new boolean[101]; //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½(?), 1<=ï¿½ï¿½ï¿½ï¿½<=100
 	
 	public static void main(String[] args) throws Exception {
 		
@@ -28,7 +28,7 @@ public class Main_2468_¾ÈÀü¿µ¿ª {
 		}		
 		
 		for(int i = 0; i<100; i++) {
-			if(checked[i]) { //map¿¡ »ç¿ëµÈ ³ôÀÌ¸¸ Å½»ö
+			if(checked[i]) { //mapï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ì¸ï¿½ Å½ï¿½ï¿½
 				search(i);
 			}
 		}
@@ -39,7 +39,7 @@ public class Main_2468_¾ÈÀü¿µ¿ª {
 	private static void search(int n) {
 		
 		visited = new boolean[N][N];
-		int safe = 0; //¾ÈÀü¿µ¿ªÀÇ °³¼ö
+		int safe = 0; //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 		
 		for(int i = 0; i<N; i++) {
 			for(int j = 0; j<N; j++){
@@ -60,7 +60,7 @@ public class Main_2468_¾ÈÀü¿µ¿ª {
 			int nc = c + dc[i];
 			if(nr>=0 && nr<N && nc>=0 && nc<N
 					&& map[nr][nc]>n && !visited[nr][nc]) {
-				//nº¸´Ù ÀÛ°Å³ª °°Àº ³ôÀÌ¸¸ Å½»ö
+				//nï¿½ï¿½ï¿½ï¿½ ï¿½Û°Å³ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ì¸ï¿½ Å½ï¿½ï¿½
 				visited[nr][nc] = true;
 				dfs(nr, nc, n);
 			}
